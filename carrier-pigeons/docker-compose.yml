@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pigeons
+      POSTGRES_PASSWORD: pigeons
+      POSTGRES_DB: pigeons
+    ports:
+      - "5432:5432"
+    volumes:
+      - carrier_pigeons_pg:/var/lib/postgresql/data
+volumes:
+  carrier_pigeons_pg:

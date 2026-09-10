@@ -1,0 +1,13 @@
+{
+  "name": "@carrier-pigeons/worker",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/worker.mjs"
+  },
+  "dependencies": {
+    "@carrier-pigeons/race-engine": "0.2.0",
+    "@solana/web3.js": "latest"
+  }
+}

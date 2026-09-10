@@ -1,0 +1,400 @@
+{
+  "generatedAt": "2026-09-10T02:24:20.401Z",
+  "raceCount": 30000,
+  "fieldSize": 12,
+  "rosterSize": 5000,
+  "expectedWinRate": 0.08333333333333333,
+  "observedWeightedWinRate": 0.0833344908725716,
+  "topWinRates": [
+    {
+      "id": "CP-4570",
+      "archetype": "stormer",
+      "starts": 66,
+      "wins": 22,
+      "winRate": 0.3333333333333333
+    },
+    {
+      "id": "CP-0740",
+      "archetype": "stormer",
+      "starts": 77,
+      "wins": 23,
+      "winRate": 0.2987012987012987
+    },
+    {
+      "id": "CP-3816",
+      "archetype": "endurance",
+      "starts": 75,
+      "wins": 22,
+      "winRate": 0.29333333333333333
+    },
+    {
+      "id": "CP-4448",
+      "archetype": "stormer",
+      "starts": 85,
+      "wins": 24,
+      "winRate": 0.2823529411764706
+    },
+    {
+      "id": "CP-4802",
+      "archetype": "trickster",
+      "starts": 78,
+      "wins": 22,
+      "winRate": 0.28205128205128205
+    },
+    {
+      "id": "CP-4063",
+      "archetype": "navigator",
+      "starts": 65,
+      "wins": 18,
+      "winRate": 0.27692307692307694
+    },
+    {
+      "id": "CP-4149",
+      "archetype": "stormer",
+      "starts": 70,
+      "wins": 19,
+      "winRate": 0.2714285714285714
+    },
+    {
+      "id": "CP-4091",
+      "archetype": "endurance",
+      "starts": 68,
+      "wins": 18,
+      "winRate": 0.2647058823529412
+    },
+    {
+      "id": "CP-4252",
+      "archetype": "navigator",
+      "starts": 68,
+      "wins": 18,
+      "winRate": 0.2647058823529412
+    },
+    {
+      "id": "CP-1928",
+      "archetype": "endurance",
+      "starts": 87,
+      "wins": 23,
+      "winRate": 0.26436781609195403
+    },
+    {
+      "id": "CP-0874",
+      "archetype": "navigator",
+      "starts": 84,
+      "wins": 22,
+      "winRate": 0.2619047619047619
+    },
+    {
+      "id": "CP-2805",
+      "archetype": "allRounder",
+      "starts": 77,
+      "wins": 20,
+      "winRate": 0.2597402597402597
+    },
+    {
+      "id": "CP-1882",
+      "archetype": "navigator",
+      "starts": 62,
+      "wins": 16,
+      "winRate": 0.25806451612903225
+    },
+    {
+      "id": "CP-2451",
+      "archetype": "stormer",
+      "starts": 62,
+      "wins": 16,
+      "winRate": 0.25806451612903225
+    },
+    {
+      "id": "CP-1688",
+      "archetype": "stormer",
+      "starts": 70,
+      "wins": 18,
+      "winRate": 0.2571428571428571
+    },
+    {
+      "id": "CP-2708",
+      "archetype": "stormer",
+      "starts": 67,
+      "wins": 17,
+      "winRate": 0.2537313432835821
+    },
+    {
+      "id": "CP-0734",
+      "archetype": "stormer",
+      "starts": 68,
+      "wins": 17,
+      "winRate": 0.25
+    },
+    {
+      "id": "CP-3473",
+      "archetype": "stormer",
+      "starts": 81,
+      "wins": 20,
+      "winRate": 0.24691358024691357
+    },
+    {
+      "id": "CP-1797",
+      "archetype": "endurance",
+      "starts": 69,
+      "wins": 17,
+      "winRate": 0.2463768115942029
+    },
+    {
+      "id": "CP-1074",
+      "archetype": "allRounder",
+      "starts": 65,
+      "wins": 16,
+      "winRate": 0.24615384615384617
+    },
+    {
+      "id": "CP-3925",
+      "archetype": "stormer",
+      "starts": 70,
+      "wins": 17,
+      "winRate": 0.24285714285714285
+    },
+    {
+      "id": "CP-1442",
+      "archetype": "stormer",
+      "starts": 62,
+      "wins": 15,
+      "winRate": 0.24193548387096775
+    },
+    {
+      "id": "CP-2739",
+      "archetype": "stormer",
+      "starts": 83,
+      "wins": 20,
+      "winRate": 0.24096385542168675
+    },
+    {
+      "id": "CP-1873",
+      "archetype": "stormer",
+      "starts": 71,
+      "wins": 17,
+      "winRate": 0.23943661971830985
+    },
+    {
+      "id": "CP-3821",
+      "archetype": "endurance",
+      "starts": 71,
+      "wins": 17,
+      "winRate": 0.23943661971830985
+    }
+  ],
+  "bottomWinRates": [
+    {
+      "id": "CP-4984",
+      "archetype": "sprinter",
+      "starts": 63,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4765",
+      "archetype": "trickster",
+      "starts": 70,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4724",
+      "archetype": "navigator",
+      "starts": 69,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4666",
+      "archetype": "navigator",
+      "starts": 67,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4663",
+      "archetype": "sprinter",
+      "starts": 66,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4655",
+      "archetype": "trickster",
+      "starts": 67,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4571",
+      "archetype": "trickster",
+      "starts": 56,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4458",
+      "archetype": "allRounder",
+      "starts": 68,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4409",
+      "archetype": "trickster",
+      "starts": 64,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4195",
+      "archetype": "trickster",
+      "starts": 68,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4178",
+      "archetype": "trickster",
+      "starts": 74,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4158",
+      "archetype": "allRounder",
+      "starts": 66,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4144",
+      "archetype": "endurance",
+      "starts": 62,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4070",
+      "archetype": "stormer",
+      "starts": 72,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-4060",
+      "archetype": "allRounder",
+      "starts": 74,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3939",
+      "archetype": "allRounder",
+      "starts": 58,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3916",
+      "archetype": "allRounder",
+      "starts": 75,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3903",
+      "archetype": "trickster",
+      "starts": 83,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3897",
+      "archetype": "trickster",
+      "starts": 65,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3721",
+      "archetype": "sprinter",
+      "starts": 67,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3720",
+      "archetype": "stormer",
+      "starts": 65,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3713",
+      "archetype": "navigator",
+      "starts": 68,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3636",
+      "archetype": "sprinter",
+      "starts": 83,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3603",
+      "archetype": "trickster",
+      "starts": 87,
+      "wins": 0,
+      "winRate": 0
+    },
+    {
+      "id": "CP-3592",
+      "archetype": "trickster",
+      "starts": 85,
+      "wins": 0,
+      "winRate": 0
+    }
+  ],
+  "archetypeSummary": [
+    {
+      "archetype": "stormer",
+      "starts": 59628,
+      "wins": 5918,
+      "winRate": 0.09924867511907158
+    },
+    {
+      "archetype": "sprinter",
+      "starts": 63959,
+      "wins": 4790,
+      "winRate": 0.07489172751293798
+    },
+    {
+      "archetype": "allRounder",
+      "starts": 62554,
+      "wins": 4764,
+      "winRate": 0.07615819931579115
+    },
+    {
+      "archetype": "trickster",
+      "starts": 58308,
+      "wins": 4178,
+      "winRate": 0.07165397544076285
+    },
+    {
+      "archetype": "navigator",
+      "starts": 58916,
+      "wins": 5023,
+      "winRate": 0.08525697603367506
+    },
+    {
+      "archetype": "endurance",
+      "starts": 56635,
+      "wins": 5327,
+      "winRate": 0.09405844442482564
+    }
+  ]
+}

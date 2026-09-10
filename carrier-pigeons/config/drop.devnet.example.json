@@ -1,0 +1,18 @@
+{
+  "cluster": "devnet",
+  "rpcUrl": "https://api.devnet.solana.com",
+  "collectionName": "Carrier Pigeons",
+  "collectionUri": "https://example.com/carrier-pigeons/collection.json",
+  "itemsAvailable": 5000,
+  "prefixName": "Carrier Pigeon #",
+  "nameLength": 4,
+  "prefixUri": "https://example.com/carrier-pigeons/metadata/",
+  "uriLength": 9,
+  "isSequential": false,
+  "mintStart": "2026-12-01T09:00:00Z",
+  "mintLimitId": 1,
+  "mintLimitPerWallet": 5,
+  "mintPriceSol": 0,
+  "treasury": "REPLACE_WITH_TREASURY_PUBLIC_KEY",
+  "royaltyBasisPoints": 500
+}
