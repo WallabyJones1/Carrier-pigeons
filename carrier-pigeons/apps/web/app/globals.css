@@ -1,4 +1,4 @@
-/* ===== RETRO MISSION CONTROL DASHBOARD ===== */
+/* ===== RETRO 1980s/90s MISSION CONTROL DASHBOARD ===== */
 * {
   box-sizing: border-box;
 }
@@ -11,6 +11,7 @@ html, body {
   font-family: 'Courier New', 'Lucida Console', monospace;
   font-size: 13px;
   line-height: 1.4;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,9 +21,10 @@ body {
     #0d1119 50%,
     #0a0e13 100%
   );
+  min-height: 100vh;
 }
 
-/* Subtle scanline effect overlay */
+/* CRT scanline effect overlay */
 body::after {
   content: '';
   position: fixed;
@@ -45,18 +47,19 @@ body::after {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #0a0e13;
 }
 
 /* ===== HEADER ===== */
 .mission-header {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 20px;
   align-items: center;
-  padding: 16px 20px;
+  padding: 14px 20px;
   border-bottom: 2px solid #2a4f6e;
   background: linear-gradient(180deg, #0d1823 0%, #0a0f18 100%);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(101, 214, 255, 0.08);
 }
 
 .header-left {
@@ -71,6 +74,7 @@ body::after {
   align-items: center;
   border-right: 1px solid #2a4f6e;
   padding-right: 24px;
+  min-width: 200px;
 }
 
 .logo-mark {
@@ -81,6 +85,7 @@ body::after {
   place-items: center;
   border: 1px solid #2a4f6e;
   background: linear-gradient(135deg, rgba(42, 79, 110, 0.3), rgba(42, 79, 110, 0.1));
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .logo-text {
@@ -90,7 +95,7 @@ body::after {
 
 .logo-text h1 {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   letter-spacing: 0.15em;
   color: #65d6ff;
@@ -105,7 +110,7 @@ body::after {
 
 .kpi-stack {
   display: grid;
-  grid-template-columns: repeat(4, minmax(80px, 1fr));
+  grid-template-columns: repeat(4, minmax(75px, 1fr));
   gap: 8px;
   flex: 1;
 }
@@ -114,9 +119,10 @@ body::after {
   display: flex;
   flex-direction: column;
   border: 1px solid #2a4f6e;
-  background: rgba(10, 20, 35, 0.8);
-  padding: 6px 8px;
+  background: linear-gradient(180deg, rgba(15, 25, 40, 0.9), rgba(10, 15, 25, 0.9));
+  padding: 5px 7px;
   font-size: 9px;
+  box-shadow: inset 0 1px 2px rgba(101, 214, 255, 0.04);
 }
 
 .kpi-label {
@@ -128,7 +134,7 @@ body::after {
 
 .kpi-value {
   color: #65d6ff;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 2px;
   font-weight: bold;
 }
@@ -155,7 +161,7 @@ body::after {
 
 .tagline p {
   margin: 0;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.1em;
   color: #a3b5c5;
   font-weight: bold;
@@ -163,29 +169,30 @@ body::after {
 
 .tagline-accent {
   color: #b9ff45;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 /* ===== NAVIGATION ===== */
 .mission-nav {
-  background: #0a0f18;
+  background: linear-gradient(180deg, #0d1218 0%, #0a0f18 100%);
   border-bottom: 1px solid #2a4f6e;
   padding: 0 20px;
   overflow-x: auto;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-tabs {
   display: flex;
-  gap: 2px;
+  gap: 1px;
 }
 
 .nav-tab {
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
-  padding: 10px 14px;
-  font-size: 10px;
+  padding: 10px 13px;
+  font-size: 9px;
   letter-spacing: 0.12em;
   color: #7a8fa3;
   cursor: pointer;
@@ -204,16 +211,17 @@ body::after {
   border-bottom-color: #65d6ff;
   color: #65d6ff;
   background: rgba(101, 214, 255, 0.08);
+  box-shadow: inset 0 -1px 0 #65d6ff;
 }
 
 /* ===== MAIN GRID ===== */
 .mission-grid {
   display: grid;
-  grid-template-columns: 1fr 2.2fr 1fr;
+  grid-template-columns: 22% 1fr 22%;
   gap: 12px;
-  padding: 16px 20px;
+  padding: 14px 20px;
   flex: 1;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   width: 100%;
 }
@@ -227,36 +235,40 @@ body::after {
 .mission-left {
   overflow-y: auto;
   max-height: calc(100vh - 200px);
+  scrollbar-width: thin;
 }
 
 .mission-right {
   overflow-y: auto;
   max-height: calc(100vh - 200px);
+  scrollbar-width: thin;
 }
 
 /* ===== PANELS ===== */
 .panel {
   border: 1px solid #2a4f6e;
   background: linear-gradient(180deg, #0d1823 0%, #0a0f18 100%);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(101, 214, 255, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(101, 214, 255, 0.04);
 }
 
 .mission-panel {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .panel-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 10px;
+  padding: 7px 8px;
   border-bottom: 1px solid rgba(42, 79, 110, 0.6);
-  background: rgba(5, 10, 18, 0.8);
+  background: rgba(5, 10, 18, 0.9);
+  font-size: 9px;
 }
 
 .panel-label {
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.12em;
   color: #65d6ff;
   font-weight: bold;
@@ -265,26 +277,28 @@ body::after {
 
 /* ===== LIVE RACES ===== */
 .race-cards {
-  padding: 8px;
+  padding: 6px;
   display: grid;
-  gap: 6px;
+  gap: 5px;
   flex: 1;
+  overflow-y: auto;
 }
 
 .race-card {
   border: 1px solid #1a3a52;
-  background: rgba(10, 20, 35, 0.9);
-  padding: 6px 8px;
+  background: linear-gradient(180deg, rgba(12, 22, 38, 0.95), rgba(8, 14, 24, 0.95));
+  padding: 5px 6px;
   display: grid;
-  gap: 4px;
+  gap: 3px;
+  box-shadow: inset 0 1px 1px rgba(101, 214, 255, 0.05);
 }
 
 .race-route {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
-  font-size: 11px;
+  gap: 6px;
+  font-size: 10px;
   font-weight: bold;
 }
 
@@ -302,7 +316,7 @@ body::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 9px;
+  font-size: 8px;
 }
 
 .race-pigeons {
@@ -311,8 +325,8 @@ body::after {
 
 .race-badge {
   padding: 2px 4px;
-  border: 1px solid #2a4f6e;
-  background: rgba(20, 30, 50, 0.9);
+  border: 1px solid #1a3a52;
+  background: rgba(15, 25, 40, 0.95);
   color: #a3b5c5;
   font-weight: bold;
   text-transform: uppercase;
@@ -322,12 +336,14 @@ body::after {
 .race-badge.live {
   color: #00ff00;
   border-color: #00ff00;
-  background: rgba(0, 255, 0, 0.05);
+  background: rgba(0, 255, 0, 0.08);
   animation: pulse-green 1.5s ease-in-out infinite;
 }
 
 .race-badge.upcoming {
   color: #b9ff45;
+  border-color: #b9ff45;
+  background: rgba(185, 255, 69, 0.08);
 }
 
 @keyframes pulse-green {
@@ -337,26 +353,29 @@ body::after {
 
 /* ===== TOP HANDLERS ===== */
 .handlers-list {
-  padding: 8px;
+  padding: 6px;
   display: grid;
-  gap: 6px;
+  gap: 4px;
+  flex: 1;
 }
 
 .handler-row {
   display: grid;
-  grid-template-columns: 28px 1fr 35px;
-  gap: 8px;
+  grid-template-columns: 26px 1fr 32px;
+  gap: 6px;
   align-items: center;
   border: 1px solid #1a3a52;
-  background: rgba(10, 20, 35, 0.9);
-  padding: 5px 6px;
-  font-size: 9px;
+  background: linear-gradient(180deg, rgba(12, 22, 38, 0.95), rgba(8, 14, 24, 0.95));
+  padding: 4px 5px;
+  font-size: 8px;
+  box-shadow: inset 0 1px 1px rgba(101, 214, 255, 0.05);
 }
 
 .rank-badge {
   color: #b9ff45;
   font-weight: bold;
   text-align: center;
+  font-size: 9px;
 }
 
 .handler-info {
@@ -367,7 +386,7 @@ body::after {
 
 .handler-info strong {
   color: #65d6ff;
-  font-size: 10px;
+  font-size: 9px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -375,86 +394,91 @@ body::after {
 
 .handler-info small {
   color: #7a8fa3;
-  font-size: 8px;
+  font-size: 7px;
 }
 
 .wins-count {
   color: #b9ff45;
   font-weight: bold;
   text-align: right;
+  font-size: 9px;
 }
 
 /* ===== MAP PANEL ===== */
 .map-panel {
+  grid-column: 2;
   grid-row: 1 / 3;
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 300px;
+  min-height: 340px;
 }
 
 .map-controls {
   display: flex;
-  gap: 4px;
+  gap: 3px;
 }
 
 .control-btn {
-  background: rgba(20, 30, 50, 0.9);
+  background: linear-gradient(180deg, rgba(30, 45, 70, 0.9), rgba(15, 25, 40, 0.9));
   border: 1px solid #2a4f6e;
   color: #65d6ff;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   transition: all 0.15s ease;
+  padding: 0;
 }
 
 .control-btn:hover {
-  background: rgba(42, 79, 110, 0.6);
+  background: rgba(42, 79, 110, 0.7);
   border-color: #65d6ff;
+  box-shadow: 0 0 6px rgba(101, 214, 255, 0.3);
 }
 
 .map-container {
-  padding: 8px;
+  padding: 6px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   overflow: hidden;
 }
 
 .world-map {
   flex: 1;
-  background: linear-gradient(180deg, rgba(10, 20, 35, 0.8), rgba(5, 10, 18, 0.9));
+  background: linear-gradient(180deg, rgba(10, 22, 40, 0.95), rgba(5, 12, 22, 0.95));
   border: 1px solid #1a3a52;
-  min-height: 180px;
+  min-height: 200px;
 }
 
 .map-legend {
   display: flex;
   gap: 12px;
-  font-size: 8px;
+  font-size: 7px;
   justify-content: center;
   color: #7a8fa3;
+  padding: 2px 0;
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .legend-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: rgba(101, 214, 255, 0.3);
 }
 
 .legend-dot.active {
   background: #65d6ff;
-  box-shadow: 0 0 6px #65d6ff;
+  box-shadow: 0 0 4px #65d6ff;
 }
 
 /* ===== BOTTOM STRIP ===== */
@@ -462,49 +486,53 @@ body::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  height: auto;
+  grid-column: 2;
 }
 
 .pigeon-card,
 .feed-card {
-  padding: 8px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
 }
 
 .pigeon-detail {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 9px;
+  gap: 4px;
+  font-size: 8px;
 }
 
 .pigeon-id {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
   border-bottom: 1px solid #1a3a52;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
 }
 
 .pigeon-icon {
-  font-size: 18px;
+  font-size: 16px;
+  flex-shrink: 0;
 }
 
 .pigeon-id strong {
   color: #65d6ff;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .pigeon-id small {
   color: #7a8fa3;
-  font-size: 8px;
+  font-size: 7px;
   display: block;
 }
 
 .detail-row {
   display: flex;
   justify-content: space-between;
-  padding: 3px 0;
+  padding: 2px 0;
   border-bottom: 1px solid rgba(42, 79, 110, 0.3);
+  font-size: 8px;
 }
 
 .label {
@@ -526,22 +554,24 @@ body::after {
 .feed-events {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 0;
+  gap: 2px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .feed-item {
   display: grid;
-  grid-template-columns: 16px 1fr;
-  gap: 6px;
+  grid-template-columns: 14px 1fr;
+  gap: 5px;
   align-items: flex-start;
-  padding: 4px 6px;
+  padding: 3px 4px;
   border-bottom: 1px solid rgba(42, 79, 110, 0.3);
-  font-size: 8px;
+  font-size: 7px;
 }
 
 .feed-icon {
-  font-size: 12px;
+  font-size: 11px;
+  flex-shrink: 0;
 }
 
 .feed-text {
@@ -553,7 +583,7 @@ body::after {
 
 .feed-text strong {
   color: #65d6ff;
-  font-size: 9px;
+  font-size: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -561,27 +591,29 @@ body::after {
 
 .feed-text small {
   color: #7a8fa3;
-  font-size: 7px;
+  font-size: 6px;
 }
 
 /* ===== NETWORK STATUS ===== */
 .status-panel {
-  padding: 8px;
+  padding: 6px;
 }
 
 .status-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 5px;
+  flex: 1;
 }
 
 .status-item {
   display: flex;
   flex-direction: column;
   border: 1px solid #1a3a52;
-  background: rgba(10, 20, 35, 0.9);
-  padding: 5px 6px;
-  font-size: 8px;
+  background: linear-gradient(180deg, rgba(12, 22, 38, 0.95), rgba(8, 14, 24, 0.95));
+  padding: 4px 5px;
+  font-size: 7px;
+  box-shadow: inset 0 1px 1px rgba(101, 214, 255, 0.05);
 }
 
 .status-label {
@@ -593,36 +625,36 @@ body::after {
 
 .status-value {
   color: #b9ff45;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   margin-top: 2px;
 }
 
 /* ===== ACTIVITY PANEL ===== */
 .activity-panel {
-  padding: 8px;
+  padding: 6px;
   flex: 1;
 }
 
 .activity-list {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .activity-item {
   display: grid;
-  grid-template-columns: 8px 1fr auto;
-  gap: 6px;
+  grid-template-columns: 6px 1fr auto;
+  gap: 5px;
   align-items: center;
-  font-size: 8px;
-  padding: 3px 4px;
+  font-size: 7px;
+  padding: 2px 3px;
   border-bottom: 1px solid rgba(42, 79, 110, 0.3);
 }
 
 .activity-dot {
   color: #65d6ff;
-  font-size: 6px;
+  font-size: 5px;
   line-height: 1;
 }
 
@@ -634,22 +666,22 @@ body::after {
   color: #7a8fa3;
   text-align: right;
   white-space: nowrap;
-  font-size: 7px;
+  font-size: 6px;
 }
 
 /* ===== PROMO BANNER ===== */
 .promo-banner {
-  padding: 12px 8px;
+  padding: 10px 6px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: linear-gradient(135deg, rgba(42, 79, 110, 0.4), rgba(20, 30, 50, 0.8));
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(42, 79, 110, 0.35), rgba(20, 30, 50, 0.7));
   border: 1px dashed #2a4f6e;
   text-align: center;
 }
 
 .promo-icon {
-  font-size: 24px;
+  font-size: 20px;
   flex-shrink: 0;
 }
 
@@ -657,12 +689,12 @@ body::after {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .promo-label {
   margin: 0;
-  font-size: 8px;
+  font-size: 7px;
   letter-spacing: 0.1em;
   color: #7a8fa3;
   font-weight: bold;
@@ -672,8 +704,8 @@ body::after {
 .promo-tagline {
   display: flex;
   justify-content: center;
-  gap: 4px;
-  font-size: 9px;
+  gap: 3px;
+  font-size: 8px;
   font-weight: bold;
   letter-spacing: 0.05em;
 }
@@ -690,8 +722,13 @@ body::after {
   }
 
   .map-panel {
+    grid-column: auto;
     grid-row: auto;
-    min-height: 250px;
+    min-height: 280px;
+  }
+
+  .bottom-strip {
+    grid-column: auto;
   }
 
   .mission-header {
@@ -728,29 +765,25 @@ body::after {
 
   .mission-grid {
     gap: 8px;
-    padding: 12px 12px;
+    padding: 10px 12px;
   }
 
   .mission-header {
-    padding: 12px;
+    padding: 10px;
   }
 
   .kpi-stack {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 5px;
   }
 
   .mission-nav {
     padding: 0 12px;
   }
 
-  .nav-tabs {
-    gap: 1px;
-  }
-
   .nav-tab {
-    font-size: 9px;
-    padding: 8px 10px;
+    font-size: 8px;
+    padding: 8px 9px;
   }
 
   .bottom-strip {
@@ -762,7 +795,7 @@ body::after {
   }
 
   .tagline {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .status-items {
@@ -770,28 +803,30 @@ body::after {
   }
 
   .handler-row {
-    grid-template-columns: 24px 1fr 30px;
+    grid-template-columns: 22px 1fr 28px;
   }
 
   .race-card {
-    padding: 5px 6px;
+    padding: 4px 5px;
+  }
+
+  .panel-header {
+    padding: 6px 7px;
   }
 }
 
 @media (max-width: 480px) {
   .mission-header {
-    padding: 10px;
-    gap: 10px;
+    padding: 8px;
+    gap: 8px;
   }
 
   .logo-text h1 {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .mission-nav {
     padding: 0 10px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   .status-items {
@@ -799,20 +834,48 @@ body::after {
   }
 
   .kpi-stack {
-    gap: 4px;
+    gap: 3px;
   }
 
   .kpi-item {
-    padding: 4px 6px;
-    font-size: 8px;
-  }
-
-  .kpi-label {
+    padding: 3px 5px;
     font-size: 7px;
   }
 
-  .kpi-value {
-    font-size: 14px;
+  .kpi-label {
+    font-size: 6px;
   }
+
+  .kpi-value {
+    font-size: 12px;
+  }
+
+  .mission-grid {
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .panel {
+    border-width: 1px;
+  }
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(20, 30, 50, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a4f6e;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #65d6ff;
 }
 

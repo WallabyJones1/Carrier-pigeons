@@ -56,6 +56,24 @@ export function WorldMap() {
           </defs>
           <rect width="360" height="120" fill="url(#grid)" />
 
+          {/* Simplified continent silhouettes */}
+          <g opacity="0.15" stroke="rgba(101,214,255,0.25)" strokeWidth="0.8" fill="none">
+            {/* North America outline */}
+            <path d="M 70 20 L 90 15 L 95 25 L 100 30 L 90 40 L 75 35 Z" />
+            {/* South America outline */}
+            <path d="M 100 50 L 110 48 L 115 65 L 105 85 L 95 70 Z" />
+            {/* Europe/Africa outline */}
+            <path d="M 140 15 L 155 12 L 160 28 L 165 35 L 150 45 L 145 50 L 135 45 Z" />
+            {/* Asia outline */}
+            <path d="M 180 18 L 220 15 L 240 25 L 280 20 L 290 35 L 270 50 L 250 55 L 200 50 Z" />
+            {/* Australia outline */}
+            <path d="M 300 75 L 315 78 L 320 90 L 305 95 Z" />
+          </g>
+
+          {/* Equator and prime meridian reference lines */}
+          <line x1="0" y1="60" x2="360" y2="60" stroke="rgba(101,214,255,0.06)" strokeWidth="0.5" strokeDasharray="4,4" />
+          <line x1="180" y1="0" x2="180" y2="120" stroke="rgba(101,214,255,0.06)" strokeWidth="0.5" strokeDasharray="4,4" />
+
           {/* Route lines */}
           {ROUTES.map((route, idx) => {
             const from = HUBS.find(h => h.id === route.from);
