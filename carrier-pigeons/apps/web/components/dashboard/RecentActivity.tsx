@@ -13,12 +13,12 @@ export function RecentActivity() {
 
   useEffect(() => {
     const mockActivities: Activity[] = [
-      { id: '1', label: 'Race R002 complete', time: '14:31' },
-      { id: '2', label: 'New handler joined', time: '14:28' },
-      { id: '3', label: 'Route MIA→ATL open', time: '14:25' },
-      { id: '4', label: 'Weather update received', time: '14:22' },
-      { id: '5', label: 'Leaderboard updated', time: '14:18' },
-      { id: '6', label: 'Network sync OK', time: '14:15' },
+      { id: '1', label: 'CP-1043 claimed race $5,240 bounty', time: '14:32' },
+      { id: '2', label: 'New handler "SWIFT_HAWK" joined network', time: '14:28' },
+      { id: '3', label: 'CP-892 entered TOKYO→SINGAPORE race', time: '14:25' },
+      { id: '4', label: 'CP-447 finished race, earned $1,820', time: '14:22' },
+      { id: '5', label: 'Race PARIS→DUBAI started (673 pigeons)', time: '14:18' },
+      { id: '6', label: 'Network sync: 4,832 birds airborne', time: '14:15' },
     ];
     setActivities(mockActivities);
   }, []);

@@ -12,11 +12,11 @@ type Race = {
 };
 
 const MOCK_RACES: Race[] = [
-  { id: 'R001', from: 'NYC', to: 'BOS', pigeons: 8, status: 'LIVE' },
-  { id: 'R002', from: 'LAX', to: 'SFO', pigeons: 12, status: 'LIVE' },
-  { id: 'R003', from: 'DEN', to: 'CHI', pigeons: 6, status: 'STARTS IN', eta: '2min' },
-  { id: 'R004', from: 'MIA', to: 'ATL', pigeons: 10, status: 'STARTS IN', eta: '5min' },
-  { id: 'R005', from: 'SEA', to: 'PDX', pigeons: 4, status: 'STARTS IN', eta: '12min' },
+  { id: 'R001', from: 'LONDON', to: 'NEW YORK', pigeons: 241, status: 'LIVE' },
+  { id: 'R002', from: 'TOKYO', to: 'SINGAPORE', pigeons: 1842, status: 'LIVE' },
+  { id: 'R003', from: 'SYDNEY', to: 'LOS ANGELES', pigeons: 892, status: 'STARTS IN', eta: '02:14' },
+  { id: 'R004', from: 'PARIS', to: 'DUBAI', pigeons: 673, status: 'STARTS IN', eta: '01:02' },
+  { id: 'R005', from: 'RIO', to: 'LONDON', pigeons: 512, status: 'STARTS IN', eta: '05:47' },
 ];
 
 export function LiveRaces() {
@@ -29,9 +29,9 @@ export function LiveRaces() {
         {MOCK_RACES.map((race) => (
           <div key={race.id} className="race-card">
             <div className="race-route">
-              <span className="route-city">{race.from}</span>
+              <span className="route-city">{race.from.substring(0, 3)}</span>
               <span className="route-arrow">→</span>
-              <span className="route-city">{race.to}</span>
+              <span className="route-city">{race.to.substring(0, 3)}</span>
             </div>
             <div className="race-meta">
               <span className="race-pigeons">🐦 {race.pigeons}</span>

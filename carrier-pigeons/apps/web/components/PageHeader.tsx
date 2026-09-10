@@ -16,20 +16,20 @@ export function PageHeader() {
         
         <div className="kpi-stack">
           <div className="kpi-item">
-            <span className="kpi-label">PIGEONS AIRBORNE</span>
-            <strong className="kpi-value">12</strong>
+            <span className="kpi-label">AIRBORNE</span>
+            <strong className="kpi-value">4,832</strong>
           </div>
           <div className="kpi-item">
-            <span className="kpi-label">HANDLERS ONLINE</span>
-            <strong className="kpi-value">8</strong>
+            <span className="kpi-label">HANDLERS</span>
+            <strong className="kpi-value">1,276</strong>
           </div>
           <div className="kpi-item">
-            <span className="kpi-label">ACTIVE RACES</span>
-            <strong className="kpi-value">3</strong>
+            <span className="kpi-label">RACES</span>
+            <strong className="kpi-value">56</strong>
           </div>
           <div className="kpi-item">
-            <span className="kpi-label">BOUNTY TOTAL</span>
-            <strong className="kpi-value">2.4K</strong>
+            <span className="kpi-label">BOUNTIES</span>
+            <strong className="kpi-value">$247K</strong>
           </div>
         </div>
       </div>
@@ -55,8 +55,8 @@ export function PageHeader() {
           </g>
         </svg>
         <div className="tagline">
-          <p>SMALL BIRDS</p>
-          <p className="tagline-accent">BIG DELIVERIES</p>
+          <p>99.9% UPTIME</p>
+          <p className="tagline-accent">ALWAYS FLYING</p>
         </div>
       </div>
     </header>
